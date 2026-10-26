@@ -1,0 +1,797 @@
+{
+  "descripcion": "Datos SINTÉTICOS del CRM para probar el informe diario sin conexión. Imitan el formato de la API de Baserow (user_field_names=true): selects como {id, value}, enlaces como [{id, value}] donde value es el campo principal (ID) de la tabla enlazada. Ninguna empresa ni persona es real.",
+  "hoy": "2026-10-26",
+  "tablas": {
+    "Empresas": [
+      {
+        "id": 1,
+        "ID": "EMP-001",
+        "razón social": "Ferretería Ejemplo S.L.",
+        "CIF": "",
+        "estado": {
+          "id": 617540,
+          "value": "Cliente Activo",
+          "color": "light-blue"
+        },
+        "zona": "Bizkaia"
+      },
+      {
+        "id": 2,
+        "ID": "EMP-002",
+        "razón social": "Metalúrgica Norte S.A.",
+        "CIF": "",
+        "estado": {
+          "id": 804790,
+          "value": "Oportunidad Abierta",
+          "color": "light-blue"
+        },
+        "zona": "Álava"
+      },
+      {
+        "id": 3,
+        "ID": "EMP-003",
+        "razón social": "Instalaciones Demo Bilbao S.L.",
+        "CIF": "",
+        "estado": {
+          "id": 617540,
+          "value": "Cliente Activo",
+          "color": "light-blue"
+        },
+        "zona": "Bizkaia"
+      },
+      {
+        "id": 4,
+        "ID": "EMP-004",
+        "razón social": "Talleres Muestra Vitoria S.L.",
+        "CIF": "",
+        "estado": {
+          "id": 617540,
+          "value": "Cliente Activo",
+          "color": "light-blue"
+        },
+        "zona": "Álava"
+      },
+      {
+        "id": 5,
+        "ID": "EMP-005",
+        "razón social": "Mantenimientos Ficticios Barakaldo S.L.",
+        "CIF": "",
+        "estado": {
+          "id": 617540,
+          "value": "Cliente Activo",
+          "color": "light-blue"
+        },
+        "zona": "Bizkaia"
+      },
+      {
+        "id": 6,
+        "ID": "EMP-006",
+        "razón social": "Industrias Prueba Durango S.A.",
+        "CIF": "",
+        "estado": {
+          "id": 10858,
+          "value": "En Prospección",
+          "color": "light-blue"
+        },
+        "zona": "Álava"
+      },
+      {
+        "id": 7,
+        "ID": "EMP-007",
+        "razón social": "Suministros Ejemplo Álava S.L.",
+        "CIF": "",
+        "estado": {
+          "id": 617540,
+          "value": "Cliente Activo",
+          "color": "light-blue"
+        },
+        "zona": "Bizkaia"
+      },
+      {
+        "id": 8,
+        "ID": "EMP-008",
+        "razón social": "Almacenes Muestra Gasteiz S.L.",
+        "CIF": "",
+        "estado": {
+          "id": 617540,
+          "value": "Cliente Activo",
+          "color": "light-blue"
+        },
+        "zona": "Álava"
+      }
+    ],
+    "Oportunidades": [
+      {
+        "id": 1,
+        "ID": "OPP-001",
+        "etapa": {
+          "id": 782869,
+          "value": "Negociación",
+          "color": "light-blue"
+        },
+        "importe": "12000.00",
+        "margen": "2400.00",
+        "probabilidad": "70",
+        "fecha prevista": "2026-10-30",
+        "origen": "Visita",
+        "competidor": "",
+        "próxima acción": "Confirmar condiciones el jueves",
+        "empresa": [
+          {
+            "id": 1,
+            "value": "EMP-001"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "ID": "OPP-002",
+        "etapa": {
+          "id": 552846,
+          "value": "Propuesta",
+          "color": "light-blue"
+        },
+        "importe": "45000.00",
+        "margen": "9000.00",
+        "probabilidad": "50",
+        "fecha prevista": "2026-11-20",
+        "origen": "Visita",
+        "competidor": "Distribuidor grande",
+        "próxima acción": "",
+        "empresa": [
+          {
+            "id": 2,
+            "value": "EMP-002"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "ID": "OPP-003",
+        "etapa": {
+          "id": 398658,
+          "value": "Cualificación",
+          "color": "light-blue"
+        },
+        "importe": "8000.00",
+        "margen": "1600.00",
+        "probabilidad": "30",
+        "fecha prevista": "2026-10-20",
+        "origen": "Visita",
+        "competidor": "",
+        "próxima acción": "Llamar para fijar visita",
+        "empresa": [
+          {
+            "id": 3,
+            "value": "EMP-003"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "ID": "OPP-004",
+        "etapa": {
+          "id": 782869,
+          "value": "Negociación",
+          "color": "light-blue"
+        },
+        "importe": "30000.00",
+        "margen": "6000.00",
+        "probabilidad": "60",
+        "fecha prevista": "2026-11-05",
+        "origen": "Visita",
+        "competidor": "",
+        "próxima acción": "Esperar respuesta del técnico",
+        "empresa": [
+          {
+            "id": 5,
+            "value": "EMP-005"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "ID": "OPP-005",
+        "etapa": {
+          "id": 83935,
+          "value": "Prospección",
+          "color": "light-blue"
+        },
+        "importe": "3000.00",
+        "margen": "600.00",
+        "probabilidad": "10",
+        "fecha prevista": "2026-12-15",
+        "origen": "Visita",
+        "competidor": "",
+        "próxima acción": "Enviar catálogo",
+        "empresa": [
+          {
+            "id": 4,
+            "value": "EMP-004"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "ID": "OPP-006",
+        "etapa": {
+          "id": 269677,
+          "value": "Ganada",
+          "color": "light-blue"
+        },
+        "importe": "9000.00",
+        "margen": "1800.00",
+        "probabilidad": "100",
+        "fecha prevista": "2026-08-15",
+        "origen": "Visita",
+        "competidor": "",
+        "próxima acción": "",
+        "empresa": [
+          {
+            "id": 1,
+            "value": "EMP-001"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "ID": "OPP-007",
+        "etapa": {
+          "id": 962682,
+          "value": "Perdida",
+          "color": "light-blue"
+        },
+        "importe": "5000.00",
+        "margen": "1000.00",
+        "probabilidad": "0",
+        "fecha prevista": "2026-09-01",
+        "origen": "Visita",
+        "competidor": "Distribuidor grande",
+        "próxima acción": "",
+        "empresa": [
+          {
+            "id": 6,
+            "value": "EMP-006"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "ID": "OPP-008",
+        "etapa": {
+          "id": 83935,
+          "value": "Prospección",
+          "color": "light-blue"
+        },
+        "importe": "6000.00",
+        "margen": "1200.00",
+        "probabilidad": "20",
+        "fecha prevista": null,
+        "origen": "Visita",
+        "competidor": "",
+        "próxima acción": "",
+        "empresa": [
+          {
+            "id": 6,
+            "value": "EMP-006"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "ID": "OPP-009",
+        "etapa": {
+          "id": 269677,
+          "value": "Ganada",
+          "color": "light-blue"
+        },
+        "importe": "15000.00",
+        "margen": "3000.00",
+        "probabilidad": "100",
+        "fecha prevista": "2026-07-05",
+        "origen": "Visita",
+        "competidor": "",
+        "próxima acción": "",
+        "empresa": [
+          {
+            "id": 8,
+            "value": "EMP-008"
+          }
+        ]
+      }
+    ],
+    "Interacciones": [
+      {
+        "id": 1,
+        "ID": "INT-001",
+        "fecha": "2026-10-21",
+        "tipo": {
+          "id": 50479,
+          "value": "Visita",
+          "color": "light-blue"
+        },
+        "participantes": "Delegado y cliente",
+        "resumen": "Interacción de ejemplo (sintética).",
+        "fuente": "Nota de WhatsApp",
+        "resultado": "",
+        "oportunidad": [
+          {
+            "id": 1,
+            "value": "OPP-001"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "ID": "INT-002",
+        "fecha": "2026-09-16",
+        "tipo": {
+          "id": 21878,
+          "value": "Llamada",
+          "color": "light-blue"
+        },
+        "participantes": "Delegado y cliente",
+        "resumen": "Interacción de ejemplo (sintética).",
+        "fuente": "Nota de WhatsApp",
+        "resultado": "",
+        "oportunidad": [
+          {
+            "id": 2,
+            "value": "OPP-002"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "ID": "INT-003",
+        "fecha": "2026-09-11",
+        "tipo": {
+          "id": 50479,
+          "value": "Visita",
+          "color": "light-blue"
+        },
+        "participantes": "Delegado y cliente",
+        "resumen": "Interacción de ejemplo (sintética).",
+        "fuente": "Nota de WhatsApp",
+        "resultado": "",
+        "oportunidad": [
+          {
+            "id": 3,
+            "value": "OPP-003"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "ID": "INT-004",
+        "fecha": "2026-10-16",
+        "tipo": {
+          "id": 50479,
+          "value": "Visita",
+          "color": "light-blue"
+        },
+        "participantes": "Delegado y cliente",
+        "resumen": "Interacción de ejemplo (sintética).",
+        "fuente": "Nota de WhatsApp",
+        "resultado": "",
+        "oportunidad": [
+          {
+            "id": 4,
+            "value": "OPP-004"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "ID": "INT-005",
+        "fecha": "2026-08-12",
+        "tipo": {
+          "id": 239475,
+          "value": "Email",
+          "color": "light-blue"
+        },
+        "participantes": "Delegado y cliente",
+        "resumen": "Interacción de ejemplo (sintética).",
+        "fuente": "Nota de WhatsApp",
+        "resultado": "",
+        "oportunidad": [
+          {
+            "id": 5,
+            "value": "OPP-005"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "ID": "INT-006",
+        "fecha": "2026-08-01",
+        "tipo": {
+          "id": 50479,
+          "value": "Visita",
+          "color": "light-blue"
+        },
+        "participantes": "Delegado y cliente",
+        "resumen": "Interacción de ejemplo (sintética).",
+        "fuente": "Nota de WhatsApp",
+        "resultado": "",
+        "oportunidad": [
+          {
+            "id": 6,
+            "value": "OPP-006"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "ID": "INT-007",
+        "fecha": "2026-07-10",
+        "tipo": {
+          "id": 50479,
+          "value": "Visita",
+          "color": "light-blue"
+        },
+        "participantes": "Delegado y cliente",
+        "resumen": "Interacción de ejemplo (sintética).",
+        "fuente": "Nota de WhatsApp",
+        "resultado": "",
+        "oportunidad": [
+          {
+            "id": 9,
+            "value": "OPP-009"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "ID": "INT-008",
+        "fecha": "2026-06-20",
+        "tipo": {
+          "id": 21878,
+          "value": "Llamada",
+          "color": "light-blue"
+        },
+        "participantes": "Delegado y cliente",
+        "resumen": "Interacción de ejemplo (sintética).",
+        "fuente": "Nota de WhatsApp",
+        "resultado": "",
+        "oportunidad": [
+          {
+            "id": 7,
+            "value": "OPP-007"
+          }
+        ]
+      }
+    ],
+    "Tareas": [
+      {
+        "id": 1,
+        "ID": "TAR-001",
+        "descripción": "Enviar la ficha técnica de variadores a Ferretería Ejemplo",
+        "responsable": "Delegado",
+        "vencimiento": "2026-10-26",
+        "prioridad": {
+          "id": 322814,
+          "value": "Alta",
+          "color": "light-blue"
+        },
+        "estado": {
+          "id": 119237,
+          "value": "Pendiente",
+          "color": "light-blue"
+        },
+        "origen": "Extracción de visita"
+      },
+      {
+        "id": 2,
+        "ID": "TAR-002",
+        "descripción": "Pedir al almacén la confirmación de stock del cuadro CE-200",
+        "responsable": "Delegado",
+        "vencimiento": "2026-10-23",
+        "prioridad": {
+          "id": 429133,
+          "value": "Media",
+          "color": "light-blue"
+        },
+        "estado": {
+          "id": 269134,
+          "value": "En curso",
+          "color": "light-blue"
+        },
+        "origen": "Extracción de visita"
+      },
+      {
+        "id": 3,
+        "ID": "TAR-003",
+        "descripción": "Preparar la propuesta para Metalúrgica Norte",
+        "responsable": "Delegado",
+        "vencimiento": "2026-10-30",
+        "prioridad": {
+          "id": 322814,
+          "value": "Alta",
+          "color": "light-blue"
+        },
+        "estado": {
+          "id": 119237,
+          "value": "Pendiente",
+          "color": "light-blue"
+        },
+        "origen": "Extracción de visita"
+      },
+      {
+        "id": 4,
+        "ID": "TAR-004",
+        "descripción": "Llamar a Instalaciones Demo Bilbao",
+        "responsable": "Delegado",
+        "vencimiento": "2026-10-22",
+        "prioridad": {
+          "id": 180479,
+          "value": "Baja",
+          "color": "light-blue"
+        },
+        "estado": {
+          "id": 225061,
+          "value": "Completada",
+          "color": "light-blue"
+        },
+        "origen": "Extracción de visita"
+      },
+      {
+        "id": 5,
+        "ID": "TAR-005",
+        "descripción": "Revisar tarifa antigua",
+        "responsable": "Delegado",
+        "vencimiento": "2026-10-15",
+        "prioridad": {
+          "id": 180479,
+          "value": "Baja",
+          "color": "light-blue"
+        },
+        "estado": {
+          "id": 273262,
+          "value": "Cancelada",
+          "color": "light-blue"
+        },
+        "origen": "Extracción de visita"
+      },
+      {
+        "id": 6,
+        "ID": "TAR-006",
+        "descripción": "Responder a la incidencia de Mantenimientos Ficticios",
+        "responsable": "Delegado",
+        "vencimiento": "2026-10-25",
+        "prioridad": {
+          "id": 959292,
+          "value": "Urgente",
+          "color": "light-blue"
+        },
+        "estado": {
+          "id": 119237,
+          "value": "Pendiente",
+          "color": "light-blue"
+        },
+        "origen": "Extracción de visita"
+      }
+    ],
+    "Ofertas": [
+      {
+        "id": 1,
+        "ID": "OFE-001",
+        "versión": "v1",
+        "partidas": "Partidas de ejemplo",
+        "descuento": "0.00",
+        "impuestos": "21.00",
+        "validez": "2026-10-29",
+        "estado": {
+          "id": 99574,
+          "value": "Enviada",
+          "color": "light-blue"
+        },
+        "aprobador": "",
+        "oportunidad": [
+          {
+            "id": 1,
+            "value": "OPP-001"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "ID": "OFE-002",
+        "versión": "v1",
+        "partidas": "Partidas de ejemplo",
+        "descuento": "0.00",
+        "impuestos": "21.00",
+        "validez": "2026-11-30",
+        "estado": {
+          "id": 99574,
+          "value": "Enviada",
+          "color": "light-blue"
+        },
+        "aprobador": "",
+        "oportunidad": [
+          {
+            "id": 4,
+            "value": "OPP-004"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "ID": "OFE-003",
+        "versión": "v1",
+        "partidas": "Partidas de ejemplo",
+        "descuento": "0.00",
+        "impuestos": "21.00",
+        "validez": "2026-10-27",
+        "estado": {
+          "id": 131864,
+          "value": "Borrador",
+          "color": "light-blue"
+        },
+        "aprobador": "",
+        "oportunidad": [
+          {
+            "id": 2,
+            "value": "OPP-002"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "ID": "OFE-004",
+        "versión": "v1",
+        "partidas": "Partidas de ejemplo",
+        "descuento": "0.00",
+        "impuestos": "21.00",
+        "validez": "2026-10-20",
+        "estado": {
+          "id": 99574,
+          "value": "Enviada",
+          "color": "light-blue"
+        },
+        "aprobador": "",
+        "oportunidad": [
+          {
+            "id": 3,
+            "value": "OPP-003"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "ID": "OFE-005",
+        "versión": "v1",
+        "partidas": "Partidas de ejemplo",
+        "descuento": "0.00",
+        "impuestos": "21.00",
+        "validez": "2026-10-28",
+        "estado": {
+          "id": 437345,
+          "value": "Aceptada",
+          "color": "light-blue"
+        },
+        "aprobador": "",
+        "oportunidad": [
+          {
+            "id": 6,
+            "value": "OPP-006"
+          }
+        ]
+      }
+    ],
+    "Incidencias": [
+      {
+        "id": 1,
+        "ID": "INC-001",
+        "tipo": {
+          "id": 934599,
+          "value": "Retraso en entrega",
+          "color": "light-blue"
+        },
+        "gravedad": {
+          "id": 52950,
+          "value": "Crítica",
+          "color": "light-blue"
+        },
+        "responsable": "Soporte",
+        "estado": {
+          "id": 6266,
+          "value": "Nueva",
+          "color": "light-blue"
+        },
+        "fechas": "2026-10-19",
+        "resolución": "",
+        "cliente": [
+          {
+            "id": 5,
+            "value": "EMP-005"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "ID": "INC-002",
+        "tipo": {
+          "id": 238184,
+          "value": "Producto defectuoso",
+          "color": "light-blue"
+        },
+        "gravedad": {
+          "id": 322814,
+          "value": "Alta",
+          "color": "light-blue"
+        },
+        "responsable": "Soporte",
+        "estado": {
+          "id": 269134,
+          "value": "En curso",
+          "color": "light-blue"
+        },
+        "fechas": "2026-10-19",
+        "resolución": "",
+        "cliente": [
+          {
+            "id": 2,
+            "value": "EMP-002"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "ID": "INC-003",
+        "tipo": {
+          "id": 937962,
+          "value": "Error en facturación",
+          "color": "light-blue"
+        },
+        "gravedad": {
+          "id": 429133,
+          "value": "Media",
+          "color": "light-blue"
+        },
+        "responsable": "Soporte",
+        "estado": {
+          "id": 6266,
+          "value": "Nueva",
+          "color": "light-blue"
+        },
+        "fechas": "2026-10-19",
+        "resolución": "",
+        "cliente": [
+          {
+            "id": 1,
+            "value": "EMP-001"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "ID": "INC-004",
+        "tipo": {
+          "id": 421046,
+          "value": "Soporte técnico",
+          "color": "light-blue"
+        },
+        "gravedad": {
+          "id": 52950,
+          "value": "Crítica",
+          "color": "light-blue"
+        },
+        "responsable": "Soporte",
+        "estado": {
+          "id": 832876,
+          "value": "Cerrada",
+          "color": "light-blue"
+        },
+        "fechas": "2026-10-19",
+        "resolución": "",
+        "cliente": [
+          {
+            "id": 4,
+            "value": "EMP-004"
+          }
+        ]
+      }
+    ]
+  }
+}

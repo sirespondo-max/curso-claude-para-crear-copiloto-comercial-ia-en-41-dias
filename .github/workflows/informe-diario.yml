@@ -1,0 +1,34 @@
+name: Informe diario
+
+# Sin IA. Lee Baserow, calcula prioridades y alertas y las envía por Telegram.
+# El informe no se imprime en el log (--enviar): los logs de un repositorio público son visibles.
+on:
+  schedule:
+    - cron: "0 6 * * 1-5" # laborables, 06:00 UTC (08:00 en verano, 07:00 en invierno en Madrid)
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  informe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Enviar el informe
+        env:
+          BASEROW_URL: ${{ vars.BASEROW_URL }}
+          BASEROW_TOKEN: ${{ secrets.BASEROW_TOKEN }}
+          BASEROW_TABLE_EMPRESAS: ${{ vars.BASEROW_TABLE_EMPRESAS }}
+          BASEROW_TABLE_OPORTUNIDADES: ${{ vars.BASEROW_TABLE_OPORTUNIDADES }}
+          BASEROW_TABLE_INTERACCIONES: ${{ vars.BASEROW_TABLE_INTERACCIONES }}
+          BASEROW_TABLE_TAREAS: ${{ vars.BASEROW_TABLE_TAREAS }}
+          BASEROW_TABLE_OFERTAS: ${{ vars.BASEROW_TABLE_OFERTAS }}
+          BASEROW_TABLE_INCIDENCIAS: ${{ vars.BASEROW_TABLE_INCIDENCIAS }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python scripts/prioridades_diarias.py --enviar

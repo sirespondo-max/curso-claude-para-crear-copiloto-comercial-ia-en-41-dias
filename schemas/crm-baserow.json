@@ -1,0 +1,609 @@
+{
+  "descripcion": "Esquema del CRM en Baserow (workspace 'CRM'). Fuente de verdad de tablas, campos y opciones de selección. Si cambias algo aquí, cámbialo también en Baserow y en schemas/extraccion-visita.schema.json.",
+  "workspace": "CRM",
+  "tablas": [
+    {
+      "nombre": "Empresas",
+      "campos": [
+        {
+          "nombre": "ID",
+          "tipo": "text"
+        },
+        {
+          "nombre": "razón social",
+          "tipo": "text"
+        },
+        {
+          "nombre": "CIF",
+          "tipo": "text"
+        },
+        {
+          "nombre": "dominio",
+          "tipo": "text"
+        },
+        {
+          "nombre": "sector",
+          "tipo": "text"
+        },
+        {
+          "nombre": "segmento",
+          "tipo": "text"
+        },
+        {
+          "nombre": "zona",
+          "tipo": "text"
+        },
+        {
+          "nombre": "dirección",
+          "tipo": "text"
+        },
+        {
+          "nombre": "propietario",
+          "tipo": "text"
+        },
+        {
+          "nombre": "estado",
+          "tipo": "single_select",
+          "opciones": [
+            "Target",
+            "En Prospección",
+            "Oportunidad Abierta",
+            "Cliente Activo",
+            "Cliente Inactivo",
+            "Descartado",
+            "No Cualificado",
+            "Partner"
+          ]
+        },
+        {
+          "nombre": "Contactos",
+          "tipo": "link_row",
+          "enlaza_con": "Contactos"
+        },
+        {
+          "nombre": "Oportunidades",
+          "tipo": "link_row",
+          "enlaza_con": "Oportunidades"
+        },
+        {
+          "nombre": "Pedidos",
+          "tipo": "link_row",
+          "enlaza_con": "Pedidos"
+        },
+        {
+          "nombre": "Incidencias",
+          "tipo": "link_row",
+          "enlaza_con": "Incidencias"
+        }
+      ]
+    },
+    {
+      "nombre": "Contactos",
+      "campos": [
+        {
+          "nombre": "ID",
+          "tipo": "text"
+        },
+        {
+          "nombre": "nombre",
+          "tipo": "text"
+        },
+        {
+          "nombre": "cargo",
+          "tipo": "text"
+        },
+        {
+          "nombre": "email",
+          "tipo": "text"
+        },
+        {
+          "nombre": "teléfono",
+          "tipo": "text"
+        },
+        {
+          "nombre": "canal preferido",
+          "tipo": "single_select",
+          "opciones": [
+            "Email",
+            "Teléfono",
+            "WhatsApp",
+            "LinkedIn",
+            "Presencial",
+            "Sin preferencia"
+          ]
+        },
+        {
+          "nombre": "consentimiento",
+          "tipo": "boolean"
+        },
+        {
+          "nombre": "última validación",
+          "tipo": "date"
+        },
+        {
+          "nombre": "empresa",
+          "tipo": "link_row",
+          "enlaza_con": "Empresas"
+        }
+      ]
+    },
+    {
+      "nombre": "Oportunidades",
+      "campos": [
+        {
+          "nombre": "ID",
+          "tipo": "text"
+        },
+        {
+          "nombre": "etapa",
+          "tipo": "single_select",
+          "opciones": [
+            "Prospección",
+            "Cualificación",
+            "Propuesta",
+            "Negociación",
+            "Ganada",
+            "Perdida"
+          ]
+        },
+        {
+          "nombre": "importe",
+          "tipo": "number"
+        },
+        {
+          "nombre": "margen",
+          "tipo": "number"
+        },
+        {
+          "nombre": "probabilidad",
+          "tipo": "number"
+        },
+        {
+          "nombre": "fecha prevista",
+          "tipo": "date"
+        },
+        {
+          "nombre": "origen",
+          "tipo": "text"
+        },
+        {
+          "nombre": "competidor",
+          "tipo": "text"
+        },
+        {
+          "nombre": "próxima acción",
+          "tipo": "text"
+        },
+        {
+          "nombre": "empresa",
+          "tipo": "link_row",
+          "enlaza_con": "Empresas"
+        },
+        {
+          "nombre": "Interacciones",
+          "tipo": "link_row",
+          "enlaza_con": "Interacciones"
+        },
+        {
+          "nombre": "Ofertas",
+          "tipo": "link_row",
+          "enlaza_con": "Ofertas"
+        }
+      ]
+    },
+    {
+      "nombre": "Interacciones",
+      "nota": "Las opciones de 'tipo' las define el alumno en el Día 3 del curso; el esquema original no las fija.",
+      "campos": [
+        {
+          "nombre": "ID",
+          "tipo": "text"
+        },
+        {
+          "nombre": "fecha",
+          "tipo": "date"
+        },
+        {
+          "nombre": "tipo",
+          "tipo": "single_select",
+          "opciones": [
+            "Visita",
+            "Llamada",
+            "Email",
+            "WhatsApp"
+          ]
+        },
+        {
+          "nombre": "participantes",
+          "tipo": "text"
+        },
+        {
+          "nombre": "resumen",
+          "tipo": "long_text"
+        },
+        {
+          "nombre": "fuente",
+          "tipo": "text"
+        },
+        {
+          "nombre": "resultado",
+          "tipo": "text"
+        },
+        {
+          "nombre": "oportunidad",
+          "tipo": "link_row",
+          "enlaza_con": "Oportunidades"
+        }
+      ]
+    },
+    {
+      "nombre": "Tareas",
+      "campos": [
+        {
+          "nombre": "ID",
+          "tipo": "text"
+        },
+        {
+          "nombre": "descripción",
+          "tipo": "long_text"
+        },
+        {
+          "nombre": "responsable",
+          "tipo": "text"
+        },
+        {
+          "nombre": "vencimiento",
+          "tipo": "date"
+        },
+        {
+          "nombre": "prioridad",
+          "tipo": "single_select",
+          "opciones": [
+            "Urgente",
+            "Alta",
+            "Media",
+            "Baja"
+          ]
+        },
+        {
+          "nombre": "estado",
+          "tipo": "single_select",
+          "opciones": [
+            "Pendiente",
+            "En curso",
+            "Completada",
+            "Cancelada"
+          ]
+        },
+        {
+          "nombre": "origen",
+          "tipo": "text"
+        },
+        {
+          "nombre": "evidencia",
+          "tipo": "file"
+        }
+      ]
+    },
+    {
+      "nombre": "Productos",
+      "campos": [
+        {
+          "nombre": "ID",
+          "tipo": "text"
+        },
+        {
+          "nombre": "código",
+          "tipo": "text"
+        },
+        {
+          "nombre": "familia",
+          "tipo": "text"
+        },
+        {
+          "nombre": "descripción aprobada",
+          "tipo": "long_text"
+        },
+        {
+          "nombre": "tarifa",
+          "tipo": "number"
+        },
+        {
+          "nombre": "vigencia",
+          "tipo": "date"
+        },
+        {
+          "nombre": "disponibilidad",
+          "tipo": "single_select",
+          "opciones": [
+            "Disponible",
+            "Bajo pedido",
+            "Sin stock",
+            "Próximamente",
+            "Descatalogado"
+          ]
+        },
+        {
+          "nombre": "restricciones",
+          "tipo": "text"
+        }
+      ]
+    },
+    {
+      "nombre": "Ofertas",
+      "campos": [
+        {
+          "nombre": "ID",
+          "tipo": "text"
+        },
+        {
+          "nombre": "versión",
+          "tipo": "text"
+        },
+        {
+          "nombre": "partidas",
+          "tipo": "text"
+        },
+        {
+          "nombre": "descuento",
+          "tipo": "number"
+        },
+        {
+          "nombre": "impuestos",
+          "tipo": "number"
+        },
+        {
+          "nombre": "validez",
+          "tipo": "date"
+        },
+        {
+          "nombre": "estado",
+          "tipo": "single_select",
+          "opciones": [
+            "Borrador",
+            "Pendiente de aprobación",
+            "Enviada",
+            "Aceptada",
+            "Rechazada",
+            "Caducada",
+            "Cancelada"
+          ]
+        },
+        {
+          "nombre": "aprobador",
+          "tipo": "text"
+        },
+        {
+          "nombre": "oportunidad",
+          "tipo": "link_row",
+          "enlaza_con": "Oportunidades"
+        },
+        {
+          "nombre": "Pedidos",
+          "tipo": "link_row",
+          "enlaza_con": "Pedidos"
+        }
+      ]
+    },
+    {
+      "nombre": "Pedidos",
+      "campos": [
+        {
+          "nombre": "ID",
+          "tipo": "text"
+        },
+        {
+          "nombre": "fecha",
+          "tipo": "date"
+        },
+        {
+          "nombre": "importe",
+          "tipo": "number"
+        },
+        {
+          "nombre": "estado",
+          "tipo": "single_select",
+          "opciones": [
+            "Pendiente",
+            "En proceso",
+            "Enviado",
+            "Entregado",
+            "Retenido",
+            "Cancelado",
+            "Devuelto"
+          ]
+        },
+        {
+          "nombre": "entrega",
+          "tipo": "date"
+        },
+        {
+          "nombre": "incidencias",
+          "tipo": "text"
+        },
+        {
+          "nombre": "cliente",
+          "tipo": "link_row",
+          "enlaza_con": "Empresas"
+        },
+        {
+          "nombre": "oferta",
+          "tipo": "link_row",
+          "enlaza_con": "Ofertas"
+        }
+      ]
+    },
+    {
+      "nombre": "Incidencias",
+      "campos": [
+        {
+          "nombre": "ID",
+          "tipo": "text"
+        },
+        {
+          "nombre": "tipo",
+          "tipo": "single_select",
+          "opciones": [
+            "Producto defectuoso",
+            "Retraso en entrega",
+            "Error en facturación",
+            "Soporte técnico",
+            "Queja comercial"
+          ]
+        },
+        {
+          "nombre": "gravedad",
+          "tipo": "single_select",
+          "opciones": [
+            "Crítica",
+            "Alta",
+            "Media",
+            "Baja"
+          ]
+        },
+        {
+          "nombre": "responsable",
+          "tipo": "text"
+        },
+        {
+          "nombre": "estado",
+          "tipo": "single_select",
+          "opciones": [
+            "Nueva",
+            "En curso",
+            "Escalada",
+            "Resuelta",
+            "Cerrada",
+            "Cancelada"
+          ]
+        },
+        {
+          "nombre": "fechas",
+          "tipo": "date"
+        },
+        {
+          "nombre": "resolución",
+          "tipo": "long_text"
+        },
+        {
+          "nombre": "cliente",
+          "tipo": "link_row",
+          "enlaza_con": "Empresas"
+        }
+      ]
+    },
+    {
+      "nombre": "Documentos",
+      "campos": [
+        {
+          "nombre": "ID",
+          "tipo": "text"
+        },
+        {
+          "nombre": "tipo",
+          "tipo": "single_select",
+          "opciones": [
+            "Contrato",
+            "Acuerdo de confidencialidad (NDA)",
+            "Propuesta comercial",
+            "Catálogo / Dossier",
+            "Ficha técnica",
+            "Presentación",
+            "Documentación legal / Certificados",
+            "Factura",
+            "Material de marketing",
+            "Otro"
+          ]
+        },
+        {
+          "nombre": "versión",
+          "tipo": "text"
+        },
+        {
+          "nombre": "propietario",
+          "tipo": "text"
+        },
+        {
+          "nombre": "fecha de vigencia",
+          "tipo": "date"
+        },
+        {
+          "nombre": "ubicación",
+          "tipo": "text"
+        },
+        {
+          "nombre": "permisos",
+          "tipo": "text"
+        }
+      ]
+    },
+    {
+      "nombre": "Fuentes",
+      "campos": [
+        {
+          "nombre": "ID",
+          "tipo": "text"
+        },
+        {
+          "nombre": "URL o sistema",
+          "tipo": "text"
+        },
+        {
+          "nombre": "fecha de consulta",
+          "tipo": "date"
+        },
+        {
+          "nombre": "fiabilidad",
+          "tipo": "single_select",
+          "opciones": [
+            "Alta",
+            "Media",
+            "Baja",
+            "Sin verificar"
+          ]
+        },
+        {
+          "nombre": "dato obtenido",
+          "tipo": "text"
+        }
+      ]
+    },
+    {
+      "nombre": "Auditoría",
+      "campos": [
+        {
+          "nombre": "ID",
+          "tipo": "text"
+        },
+        {
+          "nombre": "usuario o flujo",
+          "tipo": "text"
+        },
+        {
+          "nombre": "acción",
+          "tipo": "text"
+        },
+        {
+          "nombre": "registro afectado",
+          "tipo": "text"
+        },
+        {
+          "nombre": "antes",
+          "tipo": "long_text"
+        },
+        {
+          "nombre": "después",
+          "tipo": "long_text"
+        },
+        {
+          "nombre": "fecha",
+          "tipo": "date"
+        },
+        {
+          "nombre": "resultado",
+          "tipo": "text"
+        }
+      ]
+    }
+  ]
+}

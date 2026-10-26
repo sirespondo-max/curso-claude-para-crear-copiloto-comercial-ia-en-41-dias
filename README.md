@@ -91,8 +91,23 @@ Los descargables diarios **no se incluyen en este repositorio**: los genera Clau
 
 ## Contenido del repositorio
 
-| Archivo | Qué es |
+Es el resultado final del curso: el Copiloto Comercial completo, con datos sintéticos. Los descargables diarios no se incluyen.
+
+| Ruta | Qué es |
 |---|---|
+| [`prompt_maestro_curso_claude.md`](prompt_maestro_curso_claude.md) | El prompt que convierte a Claude en tutor del curso |
+| [`informe_final_agente_ia_delegado_comercial.md`](informe_final_agente_ia_delegado_comercial.md) | Especificación técnica del agente en la que se basa todo el curso |
+| [`CLAUDE.md`](CLAUDE.md) | Instrucciones persistentes y reglas inviolables del agente |
+| [`about-me.md`](about-me.md) | Contexto del usuario y del escenario de ejemplo |
+| [`prompts/`](prompts) | System prompts y prompts de tarea, versionados |
+| [`schemas/`](schemas) | Esquema de extracción de visitas y esquema del CRM en Baserow |
+| [`skills/`](skills) | Tareas reutilizables documentadas |
+| [`docs/`](docs) | Política de autonomía, privacidad, arquitectura y base de conocimiento |
+| [`evals/`](evals) | 20 casos de evaluación y su ejecutor |
+| [`scripts/`](scripts) | Validación de estructura e informe diario de prioridades |
+| [`.github/workflows/`](.github/workflows) | Validación en cada cambio, evaluación manual e informe diario |
+
+---|---|
 | [`prompt_maestro_curso_claude.md`](prompt_maestro_curso_claude.md) | El prompt que convierte a Claude en tutor del curso |
 | [`informe_final_agente_ia_delegado_comercial.md`](informe_final_agente_ia_delegado_comercial.md) | Especificación técnica del agente en la que se basa todo el curso |
 

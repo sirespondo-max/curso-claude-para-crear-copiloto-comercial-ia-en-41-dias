@@ -1,0 +1,27 @@
+name: Validar estructura
+
+# Sin IA y sin secretos: comprueba estructura, esquemas, enumeraciones y workflows.
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Instalar dependencias
+        run: pip install jsonschema pyyaml
+      - name: Validar estructura
+        run: python scripts/check_structure.py
+      - name: Probar el evaluador sin llamar a la API
+        run: python evals/run_eval.py --dry-run
+      - name: Probar el informe diario con datos de ejemplo
+        run: python scripts/prioridades_diarias.py --fixture evals/fixtures/crm-demo.json

@@ -1,0 +1,48 @@
+name: Evaluación de la extracción
+
+# Llama a la API de Claude y tiene coste: solo se lanza a mano.
+on:
+  workflow_dispatch:
+    inputs:
+      max_casos:
+        description: "Número máximo de casos (0 = los 20)"
+        required: false
+        default: "0"
+      system_prompt:
+        description: "Ruta del system prompt (vacío = el vigente por defecto)"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  evaluar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Instalar dependencias
+        run: pip install jsonschema anthropic
+      - name: Ejecutar la evaluación
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL }}
+          MAX_CASOS: ${{ inputs.max_casos }}
+          SYSTEM_PROMPT: ${{ inputs.system_prompt }}
+        run: |
+          mkdir -p evals/resultados
+          args=(--max-casos "${MAX_CASOS:-0}" --salida evals/resultados/resultado.json)
+          if [ -n "$SYSTEM_PROMPT" ]; then args+=(--system "$SYSTEM_PROMPT"); fi
+          python evals/run_eval.py "${args[@]}"
+      - name: Guardar el resultado
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: resultado-evaluacion
+          path: evals/resultados/resultado.json
+          if-no-files-found: ignore
+          retention-days: 30
