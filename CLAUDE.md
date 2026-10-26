@@ -19,7 +19,7 @@ informe_final_agente_ia_delegado_comercial.md   Especificación técnica
 prompts/                    System prompts y prompts de tarea, versionados
 schemas/                    JSON Schemas (extracción de visita) y esquema del CRM
 skills/                     Tareas reutilizables documentadas
-docs/                       Política de autonomía, privacidad, arquitectura y base de conocimiento
+docs/                       Política de autonomía, privacidad, arquitectura, puesta en marcha y base de conocimiento
 evals/                      Conjunto de evaluación estable y su ejecutor
 scripts/                    Validación de estructura e informe diario de prioridades
 .github/workflows/          Automatizaciones de GitHub Actions

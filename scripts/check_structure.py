@@ -42,7 +42,7 @@ REQUERIDOS = [
     "schemas/crm-baserow.json", "schemas/extraccion-visita.schema.json",
     "skills/extraccion-visita.md", "skills/generacion-briefing.md",
     "skills/evaluacion-agente.md", "skills/prioridades-diarias.md",
-    "docs/arquitectura.md", "docs/politica-autonomia.md", "docs/privacidad-y-conservacion.md",
+    "docs/arquitectura.md", "docs/puesta-en-marcha.md", "docs/politica-autonomia.md", "docs/privacidad-y-conservacion.md",
     "docs/base-conocimiento/catalogo-ejemplo.md", "docs/base-conocimiento/tarifa-2026.md",
     "evals/README.md", "evals/casos.jsonl", "evals/run_eval.py", "evals/fixtures/crm-demo.json",
     "scripts/check_structure.py", "scripts/prioridades_diarias.py",

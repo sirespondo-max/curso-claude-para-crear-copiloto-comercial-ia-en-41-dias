@@ -102,7 +102,7 @@ Es el resultado final del curso: el Copiloto Comercial completo, con datos sint�
 | [`prompts/`](prompts) | System prompts y prompts de tarea, versionados |
 | [`schemas/`](schemas) | Esquema de extracción de visitas y esquema del CRM en Baserow |
 | [`skills/`](skills) | Tareas reutilizables documentadas |
-| [`docs/`](docs) | Política de autonomía, privacidad, arquitectura y base de conocimiento |
+| [`docs/`](docs) | Política de autonomía, privacidad, arquitectura, base de conocimiento y [guía de puesta en marcha](docs/puesta-en-marcha.md) |
 | [`evals/`](evals) | 20 casos de evaluación y su ejecutor |
 | [`scripts/`](scripts) | Validación de estructura e informe diario de prioridades |
 | [`.github/workflows/`](.github/workflows) | Validación en cada cambio, evaluación manual e informe diario |

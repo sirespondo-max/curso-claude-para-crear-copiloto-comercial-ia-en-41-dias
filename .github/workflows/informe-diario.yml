@@ -12,6 +12,8 @@ permissions:
 
 jobs:
   informe:
+    # Si el repositorio no está configurado (no hay BASEROW_URL), el trabajo se omite sin fallar.
+    if: ${{ vars.BASEROW_URL != '' }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
