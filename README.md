@@ -1,5 +1,7 @@
 # Curso de Claude para crear un Copiloto Comercial de IA en 41 días
 
+![Copiloto Comercial de IA: nota, datos, confirmación, CRM y briefing](assets/copiloto-comercial-ia.png)
+
 **Aprende Claude haciendo, no leyendo: construye paso a paso un asistente de IA para un delegado de ventas, usando una cuenta gratuita de Claude.**
 
 Este curso está pensado para quien nunca ha usado Claude de forma seria ni ha programado, pero ya se maneja con el ordenador y ha probado algún chatbot de IA. Al terminar tendrás dos cosas: un agente comercial funcionando y las competencias para diseñar cualquier otro agente de IA.
@@ -102,6 +104,7 @@ Es el resultado final del curso: el Copiloto Comercial completo, con datos sint�
 | [`prompts/`](prompts) | System prompts y prompts de tarea, versionados |
 | [`schemas/`](schemas) | Esquema de extracción de visitas y esquema del CRM en Baserow |
 | [`skills/`](skills) | Tareas reutilizables documentadas |
+| [`assets/`](assets) | Imagen de presentación del proyecto |
 | [`docs/`](docs) | Política de autonomía, privacidad, arquitectura, base de conocimiento y [guía de puesta en marcha](docs/puesta-en-marcha.md) |
 | [`evals/`](evals) | 20 casos de evaluación y su ejecutor |
 | [`scripts/`](scripts) | Validación de estructura e informe diario de prioridades |
